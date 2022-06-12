@@ -1,4 +1,4 @@
-package customLimitedSet;
+package custom.limitedset;
 
 import java.util.AbstractSet;
 import java.util.HashMap;
@@ -36,7 +36,7 @@ public class LimitedSet<E> extends AbstractSet<E> implements Set<E> {
             map.remove(findMinCallCounterOwner(map));
             map.put(e, INITIAL_CALL_COUNTER);
         }
-        return  true;
+        return true;
     }
 
     @Override
@@ -72,8 +72,8 @@ public class LimitedSet<E> extends AbstractSet<E> implements Set<E> {
 
     @Override
     public String toString() {
-        return "LimitedSet{" +
-                "map=" + map +
-                '}';
+        return "LimitedSet{"
+                + "map=" + map
+                + '}';
     }
 }

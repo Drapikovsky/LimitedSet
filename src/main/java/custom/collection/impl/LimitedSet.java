@@ -1,9 +1,9 @@
-package customCollection.limitedSetImpl;
+package custom.collection.impl;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class LimitedSet<T> implements customCollection.LimitedSet<T> {
+public class LimitedSet<T> implements custom.collection.LimitedSet<T> {
     private static final int INITIAL_CALL_COUNTER = 0;
     private static final int MAX_CAPACITY = 10;
     private HashMap<T, Integer> map;
@@ -58,8 +58,8 @@ public class LimitedSet<T> implements customCollection.LimitedSet<T> {
 
     @Override
     public String toString() {
-        return "LimitedSet{" +
-                "map=" + map +
-                '}';
+        return "LimitedSet{"
+                + "map=" + map
+                + '}';
     }
 }
