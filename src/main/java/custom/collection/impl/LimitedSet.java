@@ -41,19 +41,10 @@ public class LimitedSet<T> implements custom.collection.LimitedSet<T> {
     }
 
     private T findMinCallCounterOwner(HashMap<T, Integer> map) {
-        int minCallCounterValue = findMinCallCounterValue(map);
         return map.entrySet().stream()
-                .filter(entry -> entry.getValue() == minCallCounterValue)
-                .findFirst()
+                .min(Map.Entry.comparingByValue())
                 .get()
                 .getKey();
-    }
-
-    private int findMinCallCounterValue(HashMap<T, Integer> map) {
-        return map.entrySet().stream()
-                .mapToInt(Map.Entry::getValue)
-                .min()
-                .getAsInt();
     }
 
     @Override
